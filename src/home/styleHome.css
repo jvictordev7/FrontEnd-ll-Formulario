@@ -1,0 +1,99 @@
+/* Definindo o estilo geral da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #02980c, #e1e700);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+/* Estilo do container principal */
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Ajustando o tamanho para dispositivos menores */
+    max-width: 500px; /* Definindo um limite máximo para a largura */
+}
+
+/* Estilo do título */
+h1 {
+    color: #02980c;
+    font-size: 2rem; /* Tamanho de fonte maior para visibilidade */
+}
+
+/* Estilo da imagem */
+.foto-perfil {
+    width: 200px; /* Reduzindo o tamanho da imagem em telas menores */
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Estilo do link para o formulário */
+.link-formulario {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #02980c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Ajustando o tamanho da fonte */
+}
+
+.link-formulario:hover {
+    background-color: #e1e700;
+    color: black;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 95%; /* Melhor aproveitamento do espaço em dispositivos menores */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajustando o tamanho do título */
+    }
+
+    .foto-perfil {
+        width: 180px; /* Diminuindo a imagem para se ajustar melhor */
+        height: 180px;
+    }
+
+    .link-formulario {
+        font-size: 0.9rem; /* Reduzindo o tamanho do texto do botão */
+        padding: 8px 18px; /* Menor padding para o botão */
+    }
+}
+
+/* Ajustes para dispositivos muito pequenos (celulares) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        width: 100%; /* Aumentando a largura para 100% em telas menores */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajustando ainda mais o tamanho do título */
+    }
+
+    .foto-perfil {
+        width: 160px; /* Ajustando a imagem para caber em telas bem pequenas */
+        height: 160px;
+    }
+
+    .link-formulario {
+        font-size: 0.8rem; /* Menor tamanho de fonte no botão */
+        padding: 8px 15px; /* Ajustando o padding do botão */
+    }
+}

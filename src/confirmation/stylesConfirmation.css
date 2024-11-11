@@ -1,0 +1,145 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #02980c, #e1e700);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* Estilo do título */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o container de dados */
+#data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima */
+    padding: 20px;
+}
+
+/* Estilo dos divs dentro de #data */
+#data div {
+    background-color: #e0e0e0;
+    padding: 15px;
+    width: 100%;
+    max-width: 220px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Estilo do texto dentro de cada div em #data */
+#data span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo do botão */
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 220px;
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do link "Voltar para a página inicial" */
+#backLink {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #e1e700;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Efeito de hover no link */
+#backLink:hover {
+    background-color: #005f75;
+}
+
+/* Estilo do div que contém o botão */
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Ajustes para dispositivos móveis e tablets */
+
+/* Para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; /* Ajusta o tamanho da fonte do título */
+    }
+
+    /* Ajusta o container de dados para aproveitar mais a largura disponível */
+    #data {
+        padding: 15px;
+    }
+
+    #data div {
+        max-width: 100%; /* Ajusta o tamanho máximo dos divs */
+    }
+
+    button {
+        padding: 12px 20px; /* Aumenta um pouco o padding do botão */
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+    }
+
+    #backLink {
+        font-size: 14px; /* Ajusta o tamanho da fonte do link */
+    }
+}
+
+/* Para celulares (largura máxima de 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Tamanho de fonte do título menor */
+    }
+
+    /* Ajusta o container de dados */
+    #data {
+        padding: 10px; /* Reduz o padding */
+        max-width: 100%; /* Ajusta o tamanho máximo do container */
+    }
+
+    #data div {
+        width: 100%; /* Faz com que os divs ocupem toda a largura */
+        padding: 12px; /* Ajusta o padding */
+    }
+
+    button {
+        padding: 12px 18px; /* Ajusta o padding do botão */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    #backLink {
+        font-size: 14px; /* Ajusta o tamanho da fonte do link */
+    }
+}

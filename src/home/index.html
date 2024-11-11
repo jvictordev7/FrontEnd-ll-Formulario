@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../home/styleHome.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="nome">Manoel Gomes</h1>
+        <img src="../img/manoel.jpg" alt="Foto de João Victor" class="foto-perfil" id="fotoPerfil">
+        <p id="texto">Bem-vindo(a) Click na imagem para saber quem sou eu 🫣</p>
+        <a href="../service/form.html" class="link-formulario">Acessar Formulário</a>
+    </div>
+
+    <script>
+        // Seleciona a imagem, o parágrafo e o h1 pelo ID
+        const fotoPerfil = document.getElementById('fotoPerfil');
+        const texto = document.getElementById('texto');
+        const nome = document.getElementById('nome');
+        
+        // Adiciona o evento de clique à imagem
+        fotoPerfil.addEventListener('click', function() {
+            // Verifica se o caminho da imagem termina com 'manoel.jpg'
+            if (fotoPerfil.src.endsWith('manoel.jpg')) {
+                fotoPerfil.src = '../img/perfil.jpeg'; // Caminho da nova imagem na pasta 'img'
+                nome.textContent = 'João Victor'; // Novo texto do <h1>
+            } else {
+                fotoPerfil.src = '../img/manoel.jpg'; // Volta para a imagem original
+                nome.textContent = 'Manoel Gomes'; // Volta o texto original do <h1>
+            }
+
+            // Troca o texto ao clicar
+            if (texto.textContent.includes('Bem-vindo(a)')) {
+                texto.textContent = 'Olá, meu nome é João Victor, tenho 26 anos e Sou estudante de ADS 😎';
+            } else {
+                texto.textContent = 'Bem-vindo(a) Click na imagem para saber quem sou eu 🫣';
+            }
+        });
+    </script>
+</body>
+</html>

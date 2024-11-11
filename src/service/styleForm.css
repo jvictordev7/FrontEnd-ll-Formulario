@@ -1,0 +1,123 @@
+/* Estilo geral da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #02980c, #e1e700); /* Fundo com gradiente */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+/* Estilo do container principal */
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px; /* Aumentando o padding para mais espaço ao redor */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px; /* Limita a largura do formulário */
+}
+
+/* Estilo do título dentro do container */
+h1 {
+    color: #02980c; /* Cor do título */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Estilo do formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos */
+}
+
+/* Estilo dos campos do formulário */
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Estilo dos inputs */
+input[type="text"], input[type="email"], input[type="number"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Garante que todos os inputs tenham a mesma largura */
+    box-sizing: border-box; /* Garantir que o padding não afete a largura */
+    margin-top: 8px; /* Adiciona margem entre o label e o input */
+}
+
+/* Estilo do botão */
+input[type="submit"] {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #02980c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Garante que o botão tenha a mesma largura dos inputs */
+    margin-top: 10px; /* Espaço entre o campo de input e o botão */
+}
+
+input[type="submit"]:hover {
+    background-color: #e1e700;
+    color: black;
+}
+
+/* Estilos de mensagem de erro */
+.error small {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.success small {
+    color: green;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para dispositivos móveis e tablets */
+
+/* Para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduzindo o padding em telas menores */
+        width: 90%; /* Utilizando mais da largura da tela */
+        max-width: 90%; /* Ajustando o tamanho máximo */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Tamanho da fonte do título menor */
+    }
+
+    input[type="submit"], input[type="text"], input[type="email"], input[type="number"] {
+        font-size: 0.9rem; /* Menor tamanho de fonte nos inputs */
+        padding: 10px; /* Menor padding nos campos */
+    }
+}
+
+/* Para celulares (largura máxima de 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Reduzindo ainda mais o padding */
+        width: 100%; /* Aproveitando toda a largura da tela */
+        max-width: 100%; /* Ajustando o tamanho máximo */
+    }
+
+    h1 {
+        font-size: 1.6rem; /* Fontes menores em dispositivos móveis */
+    }
+
+    input[type="submit"], input[type="text"], input[type="email"], input[type="number"] {
+        font-size: 0.8rem; /* Menor fonte nos inputs */
+        padding: 8px; /* Menor padding nos campos */
+    }
+}
